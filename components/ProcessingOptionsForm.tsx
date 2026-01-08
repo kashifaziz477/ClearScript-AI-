@@ -9,7 +9,7 @@ interface ProcessingOptionsFormProps {
 }
 
 const LANGUAGES = [
-  "English", "Spanish", "French", "German", "Chinese", "Japanese", "Portuguese", "Italian", "Hindi", "Arabic"
+  "English", "Spanish", "French", "German", "Chinese", "Japanese", "Portuguese", "Italian", "Hindi", "Arabic", "Urdu"
 ];
 
 const ProcessingOptionsForm: React.FC<ProcessingOptionsFormProps> = ({ options, setOptions, disabled }) => {
