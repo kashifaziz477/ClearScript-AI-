@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Scribe Pro",
+  "description": "A professional-grade multimedia transcription and analysis tool powered by Gemini. Upload audio or video to get speaker-identified transcripts with timestamps, AI-driven summarization, translation, and text cleaning.",
+  "requestFramePermissions": []
+}
