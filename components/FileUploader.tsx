@@ -57,7 +57,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, disabled }) =
         className="hidden"
         ref={fileInputRef}
         onChange={handleFileChange}
-        accept="audio/*,video/*,.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        accept="audio/*,video/*,.mp3,.mp4,.wav,.m4a,.ogg,.webm,.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         disabled={disabled}
       />
       
@@ -67,20 +67,20 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, disabled }) =
             ? 'bg-slate-100 dark:bg-slate-800 text-slate-400' 
             : 'bg-brand-50 dark:bg-brand-900/20 text-brand-600 dark:text-brand-400 group-hover:scale-110 group-hover:rotate-6'
         }`}>
-          <i className={`fa-solid ${isDragging ? 'fa-cloud-arrow-up' : 'fa-file-upload'} text-3xl`}></i>
+          <i className={`fa-solid ${isDragging ? 'fa-cloud-arrow-up' : 'fa-microphone-lines'} text-3xl`}></i>
         </div>
         
         <div className="space-y-2">
           <p className="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight">
-            {isDragging ? 'Drop it here!' : 'Import content'}
+            {isDragging ? 'Drop it here!' : 'Voice to Text'}
           </p>
           <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed px-4">
-            Drag & drop media files or documents to analyze.
+            Upload MP3, MP4, WAV, or Documents for AI-powered transcription and analysis.
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 mt-2 opacity-60 group-hover:opacity-100 transition-opacity">
-          {['MP3', 'MP4', 'PDF', 'DOCX'].map(tag => (
+          {['MP3', 'MP4', 'WAV', 'M4A', 'PDF', 'DOCX'].map(tag => (
             <span key={tag} className="px-2 py-0.5 text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 rounded-md">
               {tag}
             </span>

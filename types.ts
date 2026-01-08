@@ -14,6 +14,7 @@ export interface TranscriptionData {
 }
 
 export interface ProcessingOptions {
+  transcribe: boolean;
   summarize: boolean;
   translate: boolean;
   targetLanguage: string;
