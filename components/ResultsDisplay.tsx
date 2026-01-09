@@ -56,7 +56,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ data, options, isDocume
 
   const exportAsTxt = () => {
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    let content = `CLEARSCRIPT AI - HIGH FIDELITY REPORT\n`;
+    let content = `SMARTSCRIBE - HIGH FIDELITY REPORT\n`;
     content += `Generated on: ${new Date().toLocaleString()}\n`;
     content += `Type: ${isDocument ? 'Document Extraction' : 'Verbatim Transcription'}\n`;
     content += `==========================================================\n\n`;
@@ -92,7 +92,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ data, options, isDocume
       content += `${data.translatedText}\n`;
     }
 
-    downloadFile(content, `ClearScript_Report_${timestamp}.txt`, 'text/plain');
+    downloadFile(content, `SmartScribe_Report_${timestamp}.txt`, 'text/plain');
   };
 
   const hasSegments = data.segments && data.segments.length > 0;
